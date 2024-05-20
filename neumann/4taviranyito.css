@@ -1,0 +1,48 @@
+*{margin: 0;
+    padding: 0;
+  }
+  body{
+  position: relative;
+  }
+  label{
+      cursor: pointer;
+  }
+  input{
+      display:none
+  }
+  a{
+      display: flex;
+      justify-content: center;
+  }
+  
+  .header{
+      width: 100%;
+      max-width: 1600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vh;
+  }
+  .header .cim{
+      margin-top: 1vh;
+      line-height: 2;
+      font-size: 4vw;
+  }
+  
+  
+  .utasitas{
+      width: 100%;
+      max-width: 1600px;
+      display: flex;
+      justify-content: center;
+      height: 10vh;
+      margin-bottom: 5vh;
+  }
+  .utasitas_szoveg{
+      color:rgb(69, 69, 69);
+      font-size: 2vw;
+      position: absolute;
+      left: 5vw;
+      line-height: 1.5;
+      margin-top: 2vh;
+  }

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="checkbox1" />
+    <input type="checkbox" id="checkbox2" />
+    <input type="checkbox" id="checkbox3" />
+    <input type="checkbox" id="checkbox4" />
+
+    <div class="header">
+      <p class="cim">KEZDŐLAP</p>
+    </div>
+    <hr />
+
+    <div class="utasitas">
+      <p class="utasitas_szoveg">
+        Olvasd el, milyen játékmódok vannak az "INFO" gombra kattintva, vagy
+        indítsd el őket az "A JÁTÉKHOZ!" gombbal.
+      </p>
+    </div>
+
+    <div class="content">
+      <div class="kartya" id="hang_zapor">
+        <div class="kartya_eleje" id="hang_zapor_eleje">
+          <div class="ikon_container">
+            <div class="ikon"></div>
+          </div>
+          <div class="jatek_cim">
+            <p class="jatek_cim_szoveg">HANG ZÁPOR</p>
+          </div>
+          <div class="gomb_container">
+            <a href="1hang_zapor.html">
+              <button class="a_jatekhoz" id="hang_zapor_gomb">
+                <p>A JÁTÉKHOZ!</p>
+              </button>
+            </a>
+            <label for="checkbox1" class="info_gomb"><p>INFO</p></label>
+          </div>
+        </div>
+        <div class="kartya_hatulja" id="hang_zapor_hatulja">
+          <div class="ikon_container">
+            <div class="ikon"></div>
+          </div>
+          <div class="jatek_cim">
+            <p class="jatek_cim_szoveg">HANG ZÁPOR</p>
+          </div>
+          <div class="gomb_container" id="info_szoveg_container">
+            <p class="info_szoveg" id="hang_zapor_info_szoveg">
+              Ebben a játékmódban a képernyő tetejéről esnek le fekete
+              téglalapok. A téglalpokra kattintva a robot le fog ütni egy
+              hangot. Ha ügyesen megnyomsz minden fekete téglalapot különböző
+              dalokat játszhatsz le.
+            </p>
+          </div>
+          <div class="vissza_container">
+            <label for="checkbox1" class="vissza"
+              ><div class="vissza_c"><p>&lt;</p></div></label
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="kartya" id="zenedoboz">
+        <div class="kartya_eleje" id="zenedoboz_eleje">
+          <div class="ikon_container">
+            <div class="ikon"></div>
+          </div>
+          <div class="jatek_cim">
+            <p class="jatek_cim_szoveg">ZENEDOBOZ</p>
+          </div>
+          <div class="gomb_container">
+            <a href="2zenedoboz.html">
+              <button class="a_jatekhoz" id="zenedoboz_gomb">
+                <p>A JÁTÉKHOZ!</p>
+              </button>
+            </a>
+            <label for="checkbox2" class="info_gomb"><p>INFO</p></label>
+          </div>
+        </div>
+        <div class="kartya_hatulja" id="zene_doboz_hatulja">
+          <div class="ikon_container">
+            <div class="ikon"></div>
+          </div>
+          <div class="jatek_cim">
+            <p class="jatek_cim_szoveg">ZENEDOBOZ</p>
+          </div>
+          <div class="gomb_container" id="info_szoveg_container">
+            <p class="info_szoveg" id="zenedoboz_info_szoveg">
+              Válaszd ki az előre megírt dalok közül, hogy melyiket szeretnéd
+              hallani, majd egy gombnyomással játszd le azt.
+            </p>
+          </div>
+          <div class="vissza_container">
+            <label for="checkbox2" class="vissza"
+              ><div class="vissza_c"><p>&lt;</p></div></label
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="kartya" id="kottairo">
+        <div class="kartya_eleje" id="kottairo_eleje">
+          <div class="ikon_container">
+            <div class="ikon"></div>
+          </div>
+          <div class="jatek_cim">
+            <p class="jatek_cim_szoveg">KOTTAÍRÓ</p>
+          </div>
+          <div class="gomb_container">
+            <a href="3kottairo.html">
+              <button class="a_jatekhoz" id="kottairo_gomb">
+                <p>A JÁTÉKHOZ!</p>
+              </button>
+            </a>
+            <label for="checkbox3" class="info_gomb"><p>INFO</p></label>
+          </div>
+        </div>
+        <div class="kartya_hatulja" id="kottairo_hatulja">
+          <div class="ikon_container">
+            <div class="ikon"></div>
+          </div>
+          <div class="jatek_cim">
+            <p class="jatek_cim_szoveg">KOTTAÍRÓ</p>
+          </div>
+          <div class="gomb_container" id="info_szoveg_container">
+            <p class="info_szoveg" id="kottairo_info_szoveg">
+              A játékban írni tudsz egy saját kottát, beállítani hozzá egy
+              tempót, majd egy gombnyomással meghallgatatod, mit is készítettél.
+            </p>
+          </div>
+          <div class="vissza_container">
+            <label for="checkbox3" class="vissza"
+              ><div class="vissza_c"><p>&lt;</p></div></label
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="kartya" id="taviranyito">
+        <div class="kartya_eleje" id="taviranyito_eleje">
+          <div class="ikon_container">
+            <div class="ikon"></div>
+          </div>
+          <div class="jatek_cim">
+            <p class="jatek_cim_szoveg">TÁVIRÁNYÍTÓ</p>
+          </div>
+          <div class="gomb_container">
+            <a href="4taviranyito.html">
+              <button class="a_jatekhoz" id="taviranyito_gomb">
+                <p>A JÁTÉKHOZ!</p>
+              </button>
+            </a>
+            <label for="checkbox4" class="info_gomb"><p>INFO</p></label>
+          </div>
+        </div>
+        <div class="kartya_hatulja" id="taviranyito_hatulja">
+          <div class="ikon_container">
+            <div class="ikon"></div>
+          </div>
+          <div class="jatek_cim">
+            <p class="jatek_cim_szoveg">TÁVIRÁNYÍTÓ</p>
+          </div>
+          <div class="gomb_container" id="info_szoveg_container">
+            <p class="info_szoveg" id="taviranyito_info_szoveg">
+              Vedd a kezedbe az irányítást! Valós időben irányíthatod a robot
+              ütőjét billentyűk lenyomásával, vagy ay interaktív xilofon
+              illusztrációval.
+            </p>
+          </div>
+          <div class="vissza_container">
+            <label for="checkbox4" class="vissza"
+              ><div class="vissza_c"><p>&lt;</p></div></label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
