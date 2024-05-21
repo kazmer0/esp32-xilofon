@@ -8,7 +8,7 @@
       cursor: pointer;
   }
   input{
-      display:nonek
+      display:none;
   }
   a{
       display: flex;
