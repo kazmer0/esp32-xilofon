@@ -1,8 +1,16 @@
 *{margin: 0;
     padding: 0;
   }
+:root{
+    --sotetkek:#0F1035;
+    --kek: #365486;
+    --vilagoskek: #7FC7D9;
+    --feher: #DCF2F1;
+}
   body{
   position: relative;
+  height: 100vh;
+  background-color: #DCF2F1;
   }
   label{
       cursor: pointer;
@@ -27,6 +35,7 @@
       margin-top: 1vh;
       line-height: 2;
       font-size: 4vw;
+      color: #0F1035;
   }
   
   
@@ -35,14 +44,42 @@
       max-width: 1600px;
       display: flex;
       justify-content: center;
-      height: 10vh;
-      margin-bottom: 5vh;
+      align-items: center;
+      height: 15vw;
   }
   .utasitas_szoveg{
-      color:rgb(69, 69, 69);
+      color: var(--kek);
       font-size: 2vw;
       position: absolute;
       left: 5vw;
       line-height: 1.5;
       margin-top: 2vh;
   }
+
+
+.content{
+    width:100% ;
+    height: 120vh;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-flow:column;
+
+}
+.gomb{
+    font-size: 2vw;
+    height: 20vh;
+    width: 70%;
+    background-color:var(--kek);
+    color: #DCF2F1;
+    border-radius: 20px;
+}
+.gomb:hover{
+    background-color: #DCF2F1;
+    color: #365486;
+}
+@media screen and (max-width: 700px) {
+    .gomb{
+        font-size: larger;
+    }
+}
