@@ -44,8 +44,8 @@ a{
     max-width: 1600px;
     display: flex;
     justify-content: center;
-    height: 10vh;
-    margin-bottom: 5vh;
+    align-items: center;
+    height: 15vw;
 }
 .utasitas_szoveg{
     color:#365486;

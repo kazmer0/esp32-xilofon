@@ -23,6 +23,7 @@
   }
   
   .header{
+    position: relative;
       width: 100%;
       max-width: 1600px;
       display: flex;
@@ -36,21 +37,33 @@
       font-size: 4vw;
       color: #0F1035;
   }
+  .header a .vissza_a_kezdolapra{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top:25%;
+    left: 2vw;
+    background-color: #365486;
+    color: #DCF2F1;
+    height: 5vh;
+    border-radius: 10px;
+    padding: 10px;
+  }
   
   
   .utasitas{
-      width: 100%;
-      max-width: 1600px;
-      display: flex;
-      justify-content: center;
-      height: 10vh;
-      margin-bottom: 5vh;
-  }
-  .utasitas_szoveg{
-      color:#365486;
-      font-size: 2vw;
-      position: absolute;
-      left: 5vw;
-      line-height: 1.5;
-      margin-top: 2vh;
-  }
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vw;
+}
+.utasitas_szoveg{
+    color:#365486;
+    font-size: 2vw;
+    position: absolute;
+    left: 5vw;
+    line-height: 1.5;
+    margin-top: 2vh;
+}
