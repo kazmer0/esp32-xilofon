@@ -78,6 +78,11 @@
     background-color: #DCF2F1;
     color: #365486;
 }
+.gomb:disabled{
+    background-color: #7FC7D9;
+    color: #DCF2F1;
+}
+
 @media screen and (max-width: 700px) {
     .gomb{
         font-size: larger;

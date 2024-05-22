@@ -14,23 +14,68 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let boci_s=26;
     let sussfel_s=26;
     let oldmacdonald_s=26;
+    let telapo_itt_van_s=26;
+    let hullapelyhes_s=26;
+    console.log("elindult");
     boci_gomb.addEventListener('click', () => {
-        let timeLeft = 26;
-
-        // Indítsa el a visszaszámlálót
-        timerDisplay.textContent = timeLeft;
-        actionButton.disabled = true;
-        startButton.disabled = true;
-
-        countdown = setInterval(() => {
+        console.log("muksyik");
+        boci_gomb.disabled = true;
+        sussfel_gomb.disabled = true;
+        oldmacdonald_gomb.disabled = true;
+        telapo_itt_van_gomb.disabled = true;
+        hullapelyhes_gomb.disabled = true;
+   })
+   sussfel_gomb.addEventListener('click', () => {
+    console.log("muksyik");
+    boci_gomb.disabled = true;
+    sussfel_gomb.disabled = true;
+    oldmacdonald_gomb.disabled = true;
+    telapo_itt_van_gomb.disabled = true;
+    hullapelyhes_gomb.disabled = true;
+})
+oldmacdonald_gomb.addEventListener('click', () => {
+    console.log("muksyik");
+    boci_gomb.disabled = true;
+    sussfel_gomb.disabled = true;
+    oldmacdonald_gomb.disabled = true;
+    telapo_itt_van_gomb.disabled = true;
+    hullapelyhes_gomb.disabled = true;
+})
+telapo_itt_van_gomb.addEventListener('click', () => {
+    console.log("muksyik");
+    boci_gomb.disabled = true;
+    sussfel_gomb.disabled = true;
+    oldmacdonald_gomb.disabled = true;
+    telapo_itt_van_gomb.disabled = true;
+    hullapelyhes_gomb.disabled = true;
+})
+hullapelyhes_gomb.addEventListener('click', () => {
+    console.log("muksyik");
+    boci_gomb.disabled = true;
+    sussfel_gomb.disabled = true;
+    oldmacdonald_gomb.disabled = true;
+    telapo_itt_van_gomb.disabled = true;
+    hullapelyhes_gomb.disabled = true;
+})
+   /*function bociboci(){console.log("1")}
+   function sussfel(){console.log("1")}
+   function oldmacdonald(){console.log("1")}
+   function telapoittvan(){console.log("1")}
+   function hullapelyhes(){console.log("1")}*/
+});
+      /*  countdown = setInterval(() => {
             timeLeft -= 1;
             timerDisplay.textContent = timeLeft;
 
             if (timeLeft <= 0) {
                 clearInterval(countdown);
-                actionButton.disabled = false;
-                startButton.disabled = false;
+                boci_gomb.disabled = false;
+                sussfel_gomb.disabled = false;
+                oldmacdonald_gomb.disabled = false;
+                telapo_itt_van_gomb.disabled = false;
+                hullapelyhes_gomb.disabled = false;
+        
             }
         }, 1000);
     });
-});
+});*/
