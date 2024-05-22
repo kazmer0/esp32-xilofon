@@ -24,6 +24,8 @@
   }
   
   .header{
+      position: relative;
+      background-color: aqua;
       width: 100%;
       max-width: 1600px;
       display: flex;
@@ -32,11 +34,22 @@
       height: 10vh;
   }
   .header .cim{
-      margin-top: 1vh;
-      line-height: 2;
       font-size: 4vw;
       color: #0F1035;
   }
+  .header a .vissza_a_kezdolapra{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top:25%;
+    left: 2vw;
+    background-color: #365486;
+    color: #DCF2F1;
+    height: 5vh;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
   
   
   .utasitas{
