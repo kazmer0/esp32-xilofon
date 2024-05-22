@@ -11,6 +11,10 @@
     const hullapelyhes_ido = document.getElementById('hullapelyhes_ido').innerHTML;
 
     var boci_s=26;
+    var sussfel_s=26;
+    var oldmacdonald_s=26;
+    var telapoittvan_s=26;
+    var hullapelyhes_s=26;
     var ido=0;
 
     boci_gomb.addEventListener('click', () => {
@@ -38,9 +42,9 @@
     hullapelyhes_gomb.disabled = true;
     setInterval(() => {
         if(ido>=0){
-         document.getElementById('sussfel_gomb').innerHTML=ido;
+         document.getElementById('sussfel_ido').innerHTML=ido;
     }else{
-        document.getElementById('sussfel_gomb').innerHTML=sussfel_gomb;
+        document.getElementById('sussfel_ido').innerHTML=sussfel_s;
     }
      },1000)
    })
@@ -53,9 +57,9 @@ oldmacdonald_gomb.addEventListener('click', () => {
     hullapelyhes_gomb.disabled = true;
     setInterval(() => {
         if(ido>=0){
-         document.getElementById('oldmacdonald_gomb').innerHTML=ido;
+         document.getElementById('oldmacdonald_ido').innerHTML=ido;
     }else{
-        document.getElementById('oldmacdonald_gomb').innerHTML=oldmacdonald_gomb;
+        document.getElementById('oldmacdonald_ido').innerHTML=oldmacdonald_s;
 
     }
      },1000)
@@ -69,9 +73,9 @@ telapo_itt_van_gomb.addEventListener('click', () => {
     hullapelyhes_gomb.disabled = true;
     setInterval(() => {
         if(ido>=0){
-         document.getElementById('telapo_itt_van_gomb').innerHTML=ido;
+         document.getElementById('telapo_itt_van_ido').innerHTML=ido;
     }else{
-        document.getElementById('telapo_itt_van_gomb').innerHTML=telapo_itt_van_gomb;
+        document.getElementById('telapo_itt_van_ido').innerHTML=telapo_itt_van_s;
 
     }
      },1000)
@@ -86,9 +90,9 @@ hullapelyhes_gomb.addEventListener('click', () => {
     hullapelyhes_gomb.disabled = true;
     setInterval(() => {
         if(ido>=0){
-         document.getElementById('hullapelyhes_gomb').innerHTML=ido;
+         document.getElementById('hullapelyhes_ido').innerHTML=ido;
     }else{
-        document.getElementById('hullapelyhes_gomb').innerHTML=hullapelyhes_gomb;
+        document.getElementById('hullapelyhes_ido').innerHTML=hullapelyhes_s;
 
     }
      },1000)
