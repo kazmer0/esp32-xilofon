@@ -1,8 +1,15 @@
 *{margin: 0;
     padding: 0;
   }
+:root{
+    --sotetkek:#0F1035;
+    --kek: #365486;
+    --vilagoskek: #7FC7D9;
+    --feher: #DCF2F1;
+}
   body{
   position: relative;
+  background-color: #DCF2F1;
   }
   label{
       cursor: pointer;
@@ -27,6 +34,7 @@
       margin-top: 1vh;
       line-height: 2;
       font-size: 4vw;
+      color: #0F1035;
   }
   
   
@@ -39,8 +47,8 @@
       margin-bottom: 5vh;
   }
   .utasitas_szoveg{
-      color:rgb(69, 69, 69);
-      font-size: 2vw;
+    color:#365486;
+    font-size: 2vw;
       position: absolute;
       left: 5vw;
       line-height: 1.5;
