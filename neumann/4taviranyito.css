@@ -6,6 +6,14 @@
     --kek: #365486;
     --vilagoskek: #7FC7D9;
     --feher: #DCF2F1;
+    --C:red;
+    --D:orangered;
+    --E:yellow;
+    --F:yellowgreen;
+    --G:aqua;
+    --A:rgb(58, 58, 243);
+    --B:rgb(53, 53, 171);
+    --C2:red;
 }
   body{
   position: relative;
@@ -68,12 +76,13 @@
 }
 .content{
     width:100% ;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column;
 }
-.xilofon-container {
+.xilofon_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,19 +132,23 @@
 .hangjegy::after {
     bottom: 10%;
 }
-#C:hover,#D:hover,#E:hover,#F:hover,#G:hover,#A:hover,#B:hover,#C2:hover{
+#C:hover,#D:hover,#E:hover,#F:hover,#G:hover,#A:hover,#B:hover,#C2:hover,#gomb_C:hover,#gomb_D:hover,#gomb_E:hover,#gomb_F:hover,#gomb_G:hover,#gomb_A:hover,#gomb_B:hover,#gomb_C2:hover{
     background-color:#bbb;
+}
+#C:active,#D:active,#E:active,#F:active,#G:active,#A:active,#B:active,#C2:active,#gomb_C:active,#gomb_D:active,#gomb_E:active,#gomb_F:active,#gomb_G:active,#gomb_A:active,#gomb_B:active,#gomb_C2:active{
+    background-color:#262626;
 }
 
 
-#C{ background-color: red; width: 80px; height: 400px; }
-#D{ background-color: orangered; width: 80px; height: 360px; }
-#E{ background-color: yellow; width: 80px; height: 335px; }
-#F{ background-color: greenyellow; width: 80px; height: 305px; }
-#G{ background-color: aqua; width: 80px; height: 280px; }
-#A{ background-color: blue; width: 80px; height: 250px; }
-#B{ background-color: darkblue; width: 80px; height: 230px; }
-#C2{ background-color: red; width: 80px; height: 200px; }
+
+#C{ background-color: var(--C); width: 80px; height: 400px; }
+#D{ background-color: var(--D); width: 80px; height: 360px; }
+#E{ background-color: var(--E); width: 80px; height: 335px; }
+#F{ background-color: var(--F); width: 80px; height: 305px; }
+#G{ background-color: var(--G); width: 80px; height: 280px; }
+#A{ background-color: var(--A); width: 80px; height: 250px; }
+#B{ background-color: var(--B); width: 80px; height: 230px; }
+#C2{ background-color: var(--C2); width: 80px; height: 200px; }
 
 
 .palca {
@@ -154,6 +167,28 @@
     transform: rotate(2deg);
     bottom: 5%;
 }
+.gomb_container{
+    margin-top: 10vh;
+}
+.gomb{
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#gomb_C{background-color: var(--C);}
+#gomb_D{background-color: var(--D);}
+#gomb_E{background-color: var(--E);}
+#gomb_F{background-color: var(--F);}
+#gomb_G{background-color: var(--G);}
+#gomb_A{background-color: var(--A);}
+#gomb_B{background-color: var(--B);}
+#gomb_C2{ background-color: var(--C2);}
+
 
 @media (max-width: 700px) and (orientation: portrait) {
     .palca {
@@ -180,7 +215,7 @@
     .hangjegy{
         margin:0.7vw;
     }
-    .xilofon-container{
+    .xilofon_container{
         align-self: flex-start;
         margin-top: 50px;
     }
@@ -202,7 +237,7 @@
     .palca{
         width:90%;
     }
-    .xilofon-container{
+    .xilofon_container{
         margin-top:200px;
     }
     .header{

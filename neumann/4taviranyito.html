@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="4taviranyito.css" />
+    <script src="http://unpkg.com/tone"></script>
+    <script defer src="4taviranyito.js"></script>
   </head>
   <body>
     <div class="header">
@@ -24,21 +26,45 @@
     </div>
     <hr />
     <div class="content">
-      <div class="xilofon-container">
+      <div class="xilofon_container">
         <div class="palca" id="felso_palca"></div>
         <div class="palca" id="also_palca"></div>
         <div class="xilofon">
-            <button class="hangjegy" id="C"></button>
-            <button class="hangjegy" id="D"></button>
-            <button class="hangjegy" id="E"></button>
-            <button class="hangjegy" id="F"></button>
-            <button class="hangjegy" id="G"></button>
-            <button class="hangjegy" id="A"></button>
-            <button class="hangjegy" id="B"></button>
-            <button class="hangjegy" id="C2"></button>
+          <button class="hangjegy" id="C"></button>
+          <button class="hangjegy" id="D"></button>
+          <button class="hangjegy" id="E"></button>
+          <button class="hangjegy" id="F"></button>
+          <button class="hangjegy" id="G"></button>
+          <button class="hangjegy" id="A"></button>
+          <button class="hangjegy" id="B"></button>
+          <button class="hangjegy" id="C2"></button>
         </div>
-        
-    </div>
+      </div>
+      <div class="gomb_container">
+        <button class="gomb" id="gomb_C">
+          <p>Dó(C) <br /><br />A</p>
+        </button>
+        <button class="gomb" id="gomb_D">
+          <p>Re(D) <br /><br />S</p>
+        </button>
+        <button class="gomb" id="gomb_E">
+          <p>Mi(E) <br /><br />D</p>
+        </button>
+        <button class="gomb" id="gomb_F">
+          <p>Fa(F) <br /><br />F</p>
+        </button>
+        <button class="gomb" id="gomb_G">
+          <p>Szó(G) <br /><br />G</p>
+        </button>
+        <button class="gomb" id="gomb_A">
+          <p>La(A) <br /><br />H</p>
+        </button>
+        <button class="gomb" id="gomb_B">
+          <p>Ti(B) <br /><br />J</p>
+        </button>
+        <button class="gomb" id="gomb_C2">
+          <p>Dó(C) <br /><br />K</p>
+        </button>
       </div>
     </div>
   </body>
