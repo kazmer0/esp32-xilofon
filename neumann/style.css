@@ -210,10 +210,11 @@ overflow:auto;
         font-size: larger;
     }
     .utasitas_szoveg{
+        align-self: flex-start;
         font-size: large;
     }
     .utasitas{
-        margin-bottom: 5vh;
+        padding-bottom: 10vh;
     }
     .kartya{
         width: 50vw;
@@ -221,5 +222,53 @@ overflow:auto;
     }
     .kartya p{
         font-size: medium;
+    }
+    #hang_zapor .jatek_cim p{
+        transform: translateX(22%);
+    }
+    #zenedoboz .jatek_cim p{
+        transform: translateX(24%);
+    }
+    #kottairo .jatek_cim p{
+        transform: translateX(27%);
+    }
+    #taviranyito .jatek_cim p{
+        transform: translateX(22%);
+    }
+    .a_jatekhoz{
+        height: 50px;
+        top:15%
+    }
+    .info_gomb{
+        height: 50px;
+        bottom: 0;
+    }
+}
+@media (max-width:1000px) and (orientation: landscape) {
+    .content .gomb_container .info_szoveg{
+        font-size: 10px;
+    }
+    .jatek_cim_szoveg{
+        font-size: smaller;
+    }
+    #hang_zapor .jatek_cim p{
+        transform: translateX(13%);
+    }
+    #zenedoboz .jatek_cim p{
+        transform: translateX(15%);
+    }
+    #kottairo .jatek_cim p{
+        transform: translateX(22%);
+    }
+    #taviranyito .jatek_cim p{
+        transform: translateX(12%);
+    }
+    .a_jatekhoz{
+        height: 30px;
+        top:15%
+    }
+    .info_gomb{
+        height: 30px;
+        bottom: 0;
     }
 }

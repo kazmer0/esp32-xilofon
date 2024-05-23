@@ -155,7 +155,7 @@
     bottom: 5%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) and (orientation: portrait) {
     .palca {
         width: 90%;
         height: 15px;
@@ -168,12 +168,47 @@
         bottom:8%;
     }
 
-#C{ background-color: red; width: 40px; height: 200px; }
-#D{ background-color: orangered; width: 40px; height: 185px; }
-#E{ background-color: yellow; width: 40px; height: 167px; }
-#F{ background-color: yellowgreen; width: 40px; height: 155px; }
-#G{ background-color: aqua; width: 40px; height: 140px; }
-#A{ background-color: blue; width: 40px; height: 125px; }
-#B{ background-color: darkblue; width: 40px; height: 110px; }
-#C2{ background-color: red; width: 40px; height: 100px; }
+#C{width: 40px; height: 200px; }
+#D{width: 40px; height: 185px; }
+#E{width: 40px; height: 167px; }
+#F{width: 40px; height: 155px; }
+#G{width: 40px; height: 140px; }
+#A{width: 40px; height: 125px; }
+#B{width: 40px; height: 110px; }
+#C2{width: 40px; height: 100px; }
+
+    .hangjegy{
+        margin:0.7vw;
+    }
+    .xilofon-container{
+        align-self: flex-start;
+        margin-top: 50px;
+    }
+    .vissza_a_kezdolapra{
+        font-size: 9px;
+    }
+    .utasitas{
+        height: 170px;
+      }
+      .header .cim{
+            font-size: larger;
+        }
+        .utasitas_szoveg{
+            align-self: flex-start;
+            font-size: large;
+        }
+}
+@media (max-width:1000px) and (orientation: landscape) {
+    .palca{
+        width:90%;
+    }
+    .xilofon-container{
+        margin-top:200px;
+    }
+    .header{
+        height: 100px;
+    }
+    .header a .vissza_a_kezdolapra{
+        height: 15vh;
+    }
 }

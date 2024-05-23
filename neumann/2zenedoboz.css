@@ -97,6 +97,28 @@
 
 @media screen and (max-width: 700px) {
     .gomb{
-        font-size: larger;
+        font-size: large;
     }
+    .vissza_a_kezdolapra{
+        font-size: 9px;
+    }
+    .utasitas{
+        height: 150px;
+      }
+      .header .cim{
+            font-size: larger;
+        }
+        .utasitas_szoveg{
+            align-self: flex-start;
+            font-size: large;
+        }
+}
+@media (max-width:1000px) and (orientation: landscape) {
+    .header{
+        height: 100px;
+    }
+    .header a .vissza_a_kezdolapra{
+        height: 15vh;
+    }
+
 }
