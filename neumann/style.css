@@ -123,11 +123,11 @@ a{
 
 
 .kartya_eleje{
-
     position: absolute;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
+    transform: rotateX(0deg)
 }
 .gomb_container{
     position: absolute;
