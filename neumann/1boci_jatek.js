@@ -116,7 +116,7 @@ function setup(){
   //mySound.play();
 }
  
-function mousePressed(){
+function mouseClicked(){
   if(tiles[0].touched(mouseX,mouseY,alpha)){
     tiles.splice(0,1);
   }
