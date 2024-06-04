@@ -11,15 +11,11 @@
   position: relative;
   background-color: #DCF2F1;
   }
-  label{
-      cursor: pointer;
-  }
-  input{
-      display:none
-  }
   a{
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   text-decoration: none;
   }
   
   .header{
@@ -124,14 +120,6 @@ svg{
     grid-column-start: 4;
     grid-column-end: 6;
 }
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 700px) {
   .vissza_a_kezdolapra{
