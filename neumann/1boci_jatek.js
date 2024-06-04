@@ -102,7 +102,7 @@ let gameOver = false;
 let gameWon = false;
 
 function setup(){
-  if(windowWidth<windowHeight){
+  if(windowWidth<windowHeight-20){
     createCanvas(windowWidth,windowHeight);
   }
   else{
