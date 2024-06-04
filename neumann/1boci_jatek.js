@@ -12,14 +12,9 @@ let prv = 0;
 
 let alpha=0;
 
-function preload() {
-  soundFormats('mp3', 'ogg');
-  //mySound = loadSound('https://dl.dropbox.com/s/uuh53peopd55oe1/DEAD.mp3?');
-}
-
 
 let score = 0;
-let s = 'play';
+let s = 'Játék';
 
 class Tile{
   constructor(lane,w,h){
@@ -53,28 +48,28 @@ class Tile{
     if((x>this.x) && (x<this.x+this.w) && (y>this.y) && (y<this.y+this.h+a)){
       if(this.y<this.h/2){
         score+=1;
-        s = 'lame';
+        s = 'ezaz';
       }
       else if(this.y<3*this.h/2){
         score+=2;
-        s = 'not bad';
+        s = 'nem rossz';
       }
       else if(this.y<5*this.h/2){
         score+=3;
-        s = 'nice';
+        s = 'szép';
       }
       else if(this.y<7*this.h/2){
         score+=4;
-        s = 'super';
+        s = 'szuper';
       }
       else if(this.y<9*this.h/2){
         score+=5;
-        s = 'you rock';
+        s = 'NYOMOOOD';
       }
       return true;
     }
     else {
-      s = 'LMAO';
+      s = 'bruh';
       return false;
     }
   }
@@ -197,14 +192,14 @@ function draw(){
   if(gameOver){
     //mySound.stop();
     textSize(50);
-    text('LOL YOU LOST',width/2,height/2);
+    text('vesztetél',width/2,height/2);
   }
   if(gameWon){
     //mySound.stop();
     textSize(50);
     background(col);
-    text('YOU KILLED IT',width/2,height/2);
-    text('YOU WON',width/2,height/2+50);
-    text('score: '+score,width/2,height/2+100);
+    text('befejezted',width/2,height/2);
+    text('nyertél',width/2,height/2+50);
+    text('pontok:'+score,width/2,height/2+100);
   }
 }
