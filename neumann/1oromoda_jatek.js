@@ -107,7 +107,12 @@ let gameOver = false;
 let gameWon = false;
 
 function setup(){
-  createCanvas(windowWidth,windowHeight);
+  if(windowWidth<windowHeight){
+    createCanvas(windowWidth,windowHeight);
+  }
+  else{
+    createCanvas(windowHeight/2,windowHeight-20);
+  }
   background(col);
   now = int(random(4));
   tiles.push(new Tile(now,width,height));
