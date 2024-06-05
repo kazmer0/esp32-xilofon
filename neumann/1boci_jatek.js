@@ -1,8 +1,6 @@
-
-
-let mySound;
 let amp;
 let varR;
+let gomb = document.getElementById("gomb");
 
 let count =0;
 let col = 0;
@@ -16,6 +14,11 @@ let alpha=0;
 let score = 0;
 let s = 'Játék';
 
+let tiles = [];
+var gameOver = false;
+var gameWon = false;
+
+
 class Tile{
   constructor(lane,w,h){
     this.lane= lane;
@@ -25,19 +28,10 @@ class Tile{
     this.x = 1 + this.lane*w/4;
     this.y = -2*this.h;
     this.speed = 6;
-    this.once = true;
-    this.trolled = false;
   }
   
   move(r,a){
       this.y+=r*this.speed+a;
-      
-      if(this.y>5*this.h/2 && troll && !this.trolled){
-        this.trolled = true;
-        this.speed = 4;
-        this.lane = 3 - this.lane;
-        this.x = 1 + this.lane*this.t/4;
-      }
   }
   
   touched(x,y,a){
@@ -75,15 +69,14 @@ class Tile{
   }
   
   ding(){
-    if(this.y>-this.h+5&&this.once){
-      this.once=false;
+    if(this.y>-this.h+5){
       return true;
     }
     return false;
   }
   
   dong(){
-    return this.y>9*this.h/2;
+    return this.y>10*this.h/2;
   }
   
   show(r,a){
@@ -97,10 +90,6 @@ class Tile{
 }
 
 
-let tiles = [];
-let gameOver = false;
-let gameWon = false;
-
 function setup(){
   if(windowWidth<windowHeight-20){
     createCanvas(windowWidth,windowHeight);
@@ -113,18 +102,15 @@ function setup(){
   now = int(random(4));
   tiles.push(new Tile(now,width,height));
   amp = new p5.Amplitude();
-  //mySound.play();
+
+  
 }
- 
 function mouseClicked(){
   if(tiles[0].touched(mouseX,mouseY,alpha)){
-    tiles.splice(0,1);
-  }
+    tiles.splice(0,1);}
   else gameOver = true;
 }
-  
 
-troll = false;
 
 function draw(){
   frameRate(30);
@@ -145,7 +131,7 @@ function draw(){
   
   for(tile of tiles){
     if(tile.dong()){
-      s = 'shabash';
+      s = 'bruh';
       gameOver=true;
     }
   }
@@ -162,10 +148,7 @@ function draw(){
     col=0;
   else
     col=255;
-    
-  if(score>250)
-    troll = true;
-  
+
   if(varR<0.2){
     varR = 0.8;
   } 
@@ -188,20 +171,20 @@ function draw(){
   
   textSize(32);
   textAlign(CENTER);
-  fill(col);
+  fill(0);
   text(s,width/2,32);
   text(score,width/2,64);
   
-  if(score>=600) 
+  if(score>=600){
     gameWon = true;
-  
-  if(gameOver){
-    //mySound.stop();
-    textSize(50);
-    text('vesztetél',width/2,height/2);
+  }
+  if(gameOver == true){
+    textSize(45);
+    text('vesztettél',width/2,height/3);
+    gomb.style.visibility = "visible";
+
   }
   if(gameWon){
-    //mySound.stop();
     textSize(50);
     background(col);
     text('befejezted',width/2,height/2);
