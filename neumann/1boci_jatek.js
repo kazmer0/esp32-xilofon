@@ -1,5 +1,3 @@
-let amp;
-let varR;
 let gomb = document.getElementById("gomb");
 
 let count =0;
@@ -68,14 +66,14 @@ class Tile{
     }
   }
   
-  ding(){
+  arrived(){
     if(this.y>-this.h+5){
       return true;
     }
     return false;
   }
   
-  dong(){
+  missed(){
     return this.y>10*this.h/2;
   }
   
@@ -100,24 +98,21 @@ function setup(){
   }
   background(col);
   now = int(random(4));
-  tiles.push(new Tile(now,width,height));
-  amp = new p5.Amplitude();
-
-  
+  tiles.push(new Tile(now,width,height));  
 }
+if(!gameOver){
 function mouseClicked(){
   if(tiles[0].touched(mouseX,mouseY,alpha)){
     tiles.splice(0,1);}
   else gameOver = true;
-}
 
+}}
 
 function draw(){
   frameRate(30);
   alpha = frameCount/200;
-  varR = amp.getLevel();
   
-  if(tiles[tiles.length-1].ding()){
+  if(tiles[tiles.length-1].arrived()){
     prv = now;
     now = int(random(4));
     if(now===prv)
@@ -130,7 +125,7 @@ function draw(){
   }
   
   for(tile of tiles){
-    if(tile.dong()){
+    if(tile.missed()){
       s = 'bruh';
       gameOver=true;
     }
@@ -149,10 +144,6 @@ function draw(){
   else
     col=255;
 
-  if(varR<0.2){
-    varR = 0.8;
-  } 
-  else varR = map(varR,0.4,1,0.8,1);
   
   background(col,200);
   stroke(100);
@@ -164,8 +155,8 @@ function draw(){
   
   for(tile of tiles){
     if(!gameOver&&!gameWon){
-      tile.show(varR,alpha);
-      tile.move(varR,alpha);
+      tile.show(0.8,1);
+      tile.move(1,1);
     }
   }
   
@@ -182,7 +173,10 @@ function draw(){
     textSize(45);
     text('vesztettél',width/2,height/3);
     gomb.style.visibility = "visible";
-
+    tiles=[];
+}
+  else{
+    gomb.style.visibility = "hidden";
   }
   if(gameWon){
     textSize(50);
@@ -191,4 +185,16 @@ function draw(){
     text('nyertél',width/2,height/2+50);
     text('pontok:'+score,width/2,height/2+100);
   }
+}
+function restartGame() {
+  gameOver = false;
+
+  score = 0;
+  s = "jatek";
+  tiles = [];
+  gameWon = false;
+  col = 0;
+  now = int(random(4));
+  tiles.push(new Tile(now, width, height));
+  loop();
 }
