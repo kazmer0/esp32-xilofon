@@ -1,4 +1,5 @@
 let gomb = document.getElementById("gomb");
+maradekIdo = 5;
 
 let count =0;
 let col = 0;
@@ -61,8 +62,8 @@ class Tile{
       return true;
     }
     else {
-      s = 'bruh';
-      return false;
+      s = 'VESZTETTEL';
+      gameOver=true;
     }
   }
   
@@ -75,7 +76,7 @@ class Tile{
   
   missed(){
     return this.y>10*this.h/2;
-  }
+}
   
   show(r,a){
       fill(255-col);
@@ -98,15 +99,19 @@ function setup(){
   }
   background(col);
   now = int(random(4));
-  tiles.push(new Tile(now,width,height));  
+  tiles.push(new Tile(now,width,height));
+ 
 }
-if(!gameOver){
-function mouseClicked(){
-  if(tiles[0].touched(mouseX,mouseY,alpha)){
-    tiles.splice(0,1);}
-  else gameOver = true;
 
-}}
+function mouseClicked(){
+  
+    if(tiles[0].touched(mouseX,mouseY,alpha)){
+    tiles.splice(0,1);}
+  else {
+    gameOver = true;
+  }
+  }
+
 
 function draw(){
   frameRate(30);
@@ -126,8 +131,18 @@ function draw(){
   
   for(tile of tiles){
     if(tile.missed()){
-      s = 'bruh';
+      s = 'VESZTETTEL';
       gameOver=true;
+      /*setInterval(() => {
+        if(maradekIdo>=0 && gameOver){
+         document.getElementById("ido").innerHTML=maradekIdo;
+         maradekIdo--;
+    }else{
+        restartGame();
+        maradekIdo=5;
+        gameOver=false;
+    }
+     },5000)  */
     }
   }
   
@@ -173,10 +188,10 @@ function draw(){
     textSize(45);
     text('vesztettél',width/2,height/3);
     gomb.style.visibility = "visible";
-    tiles=[];
+    
 }
   else{
-    gomb.style.visibility = "hidden";
+    gomb.style.visibility = "hdden";
   }
   if(gameWon){
     textSize(50);
@@ -196,5 +211,7 @@ function restartGame() {
   col = 0;
   now = int(random(4));
   tiles.push(new Tile(now, width, height));
+  console.log("lopp elott");
   loop();
+  console.log("loop utan");
 }
