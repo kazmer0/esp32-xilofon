@@ -9,7 +9,7 @@ let prv = 0;
 
 let alpha = 0;
 
-let score = 590;
+let score = 0;
 let s = 'Játék';
 
 let tiles = [];
@@ -140,8 +140,8 @@ function draw() {
 
   for (let tile of tiles) {
     if (!gameOver && !gameWon) {
-      tile.show(0.8, 1);
-      tile.move(1, 1);
+      tile.show(0.8, alpha);
+      tile.move(1, aplha);
     }
   }
 
