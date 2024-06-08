@@ -140,8 +140,8 @@ function draw() {
 
   for (let tile of tiles) {
     if (!gameOver && !gameWon) {
-      tile.show(0.8, alpha);
-      tile.move(1, aplha);
+      tile.show(0.8, 1);
+      tile.move(1, 1);
     }
   }
 
