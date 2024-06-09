@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/addons/p5.sound.min.js"></script>
   </head>
   <body>
     <style>
       html,
       body {
-        height: 100%;
+        height: 100svh;
       }
 
       body {
@@ -21,7 +20,23 @@
         justify-content: center;
         align-items: center;
       }
+      button {
+        position: absolute;
+        visibility: hdden;
+        background-color: #000;
+        border: gray 2px solid;
+        color: white;
+        font-size: larger;
+        margin-top: 10%;
+        height: 10%;
+        width: 10%;
+        min-width: 200px;
+      }
+      button:hover {
+        background-color: gray;
+      }
     </style>
+    <button id="gomb">Kezdd újra!</button>
     <script src="1oromoda_jatek.js"></script>
   </body>
 </html>
