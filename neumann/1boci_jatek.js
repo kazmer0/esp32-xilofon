@@ -1,5 +1,4 @@
 let gomb = document.getElementById("gomb");
-maradekIdo = 5;
 
 let count = 0;
 let col = 0;
@@ -140,8 +139,8 @@ function draw() {
 
   for (let tile of tiles) {
     if (!gameOver && !gameWon) {
-      tile.show(0.8, 1);
-      tile.move(1, 1);
+      tile.show(0.8, alpha);
+      tile.move(1, alpha);
     }
   }
 
@@ -151,7 +150,7 @@ function draw() {
   text(s, width / 2, 32);
   text(score, width / 2, 64);
 
-  if (score >= 600) {
+  if (score >= 800) {
     gameWon = true;
   }
   if (gameOver == true) {
@@ -176,6 +175,7 @@ function restartGame() {
   tiles = [];
   gameWon = false;
   col = 0;
+    frameCount=0;
   now = int(random(4));
   tiles.push(new Tile(now, width, height));
   loop();
